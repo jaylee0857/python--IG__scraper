@@ -1,0 +1,26 @@
+# Python venv
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Local auth / cookies (你的 scraper 會產生)
+auth_data/
+*.json
+
+# Output files
+output/
+result.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
