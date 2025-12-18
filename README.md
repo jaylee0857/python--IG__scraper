@@ -7,17 +7,13 @@
 ---
 
 確認 Python 已安裝
-
 在 PowerShell 執行：
-
-```
-python --version```
-
+python --version
+---
 ##安裝必要套件
-```
 python -m pip install --upgrade pip
 python -m pip install instagram-posts-scraper requests beautifulsoup4 cloudscraper pandas pytz seleniumbase lxml
-```
+---
 
 ##建立 run_once.py
 ```
@@ -43,7 +39,8 @@ with open("result.json", "w", encoding="utf-8") as f:
 print("Saved -> result.json")
 ```
 
-##執行
-```python run_once.py
-```
+---
+#執行
+python run_to_json.py
+---
 輸出json
