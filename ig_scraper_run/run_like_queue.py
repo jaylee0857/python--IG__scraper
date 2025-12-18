@@ -25,10 +25,10 @@ res = scraper.get_posts(target_info=target_info)
 
 print(f"account_status = {res.get('account_status')}")
 
-# ✅ 1) 優先用 init_posts（通常這裡就是正確 shortcode）
+# 優先用 init_posts（通常這裡就是正確 shortcode）
 shortcodes = res.get("init_posts", []) or []
 
-# ✅ 2) 如果 init_posts 沒東西，再從 data 裡找「像 shortcode 的欄位」
+#  如果 init_posts 沒東西，再從 data 裡找「像 shortcode 的欄位」
 if not shortcodes:
     items = res.get("data", []) or []
     for it in items:
@@ -54,7 +54,7 @@ print(f"posts queued   = {len(urls)}")
 for u in urls[:5]:
     print(u)
 
-# 逐篇開啟（你手動操作）
+# 逐篇開啟手動操作
 for url in urls:
     webbrowser.open_new_tab(url)
     input("看完後按 Enter 開下一篇...")  # ← 這行才是正確寫法（把「改在哪」拿掉或變註解）
